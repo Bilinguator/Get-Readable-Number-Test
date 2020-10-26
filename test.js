@@ -258,6 +258,10 @@ If input is invalid the function returns undefined`, function() {
     it('Expected "nine hundred ninety nine" when argument is 999 (number)', function() {
       assert.equal(getReadableNumber(999), 'nine hundred ninety nine');
     });
+   
+    it('Expected "one" when arguments are more than one, and the first argument is 1 (number)', function() {
+      assert.equal(getReadableNumber(1, 5), 'one');
+    });
 
   });
 
@@ -325,6 +329,10 @@ If input is invalid the function returns undefined`, function() {
       assert.equal(getReadableNumber(1.555), undefined);
     });
 
+    it('Expected undefined when there are no arguments', function() {
+      assert.equal(getReadableNumber(), undefined);
+    });
+   
   });
 
 });
